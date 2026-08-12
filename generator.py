@@ -1,19 +1,17 @@
 def generate_test_cases(requirement):
     return f"""
-Generated Test Cases
+Positive Test:
+- Verify valid scenario works
+
+Negative Test:
+- Verify invalid input fails
+
+Boundary Test:
+- Verify minimum and maximum values
+
+Edge Test:
+- Verify unusual but valid conditions
 
 Requirement:
 {requirement}
-
-Positive Test:
-- Verify valid login succeeds
-
-Negative Test:
-- Verify invalid password fails
-
-Boundary Test:
-- Verify account locks after 5 attempts
-
-Edge Test:
-- Verify email is case insensitive
 """
