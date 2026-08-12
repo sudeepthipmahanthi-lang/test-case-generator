@@ -1,4 +1,4 @@
-\from generator import generate_test_cases
+from generator import generate_test_cases
 from critic import review_test_cases
 
 print("=== Test Case Generator ===")
