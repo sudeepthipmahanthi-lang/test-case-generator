@@ -1,16 +1,22 @@
-from generator import generate_test_cases
+\from generator import generate_test_cases
 from critic import review_test_cases
 
-requirement = """
-User Login
-"""
+print("=== Test Case Generator ===")
+
+requirement = input("Enter requirement: ")
 
 tests = generate_test_cases(requirement)
 
-print("Generated Tests:")
+print("\n=== GENERATED TEST CASES ===")
 print(tests)
 
 gaps = review_test_cases(tests)
 
-print("\nCoverage Gaps:")
-print(gaps)
+print("\n=== CRITIQUE RESULT ===")
+
+if gaps:
+    print("Coverage gaps found:")
+    for gap in gaps:
+        print(f"- {gap}")
+else:
+    print("No coverage gaps found.")
